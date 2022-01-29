@@ -1,0 +1,30 @@
+[submodule "tool/compet/csharp-core"]
+	path = tool/compet/csharp-core
+	url = https://github.com/darkcompet/csharp-core.git
+[submodule "tool/compet/csharp-core-http"]
+	path = tool/compet/csharp-core-http
+	url = https://github.com/darkcompet/csharp-core-http.git
+[submodule "tool/compet/csharp-net-log"]
+	path = tool/compet/csharp-net-log
+	url = https://github.com/darkcompet/csharp-net-log.git
+[submodule "tool/compet/csharp-net-json"]
+	path = tool/compet/csharp-net-json
+	url = https://github.com/darkcompet/csharp-net-json.git
+[submodule "tool/compet/csharp-net-http"]
+	path = tool/compet/csharp-net-http
+	url = https://github.com/darkcompet/csharp-net-http.git
+[submodule "tool/compet/csharp-unity-core"]
+	path = tool/compet/csharp-unity-core
+	url = https://github.com/darkcompet/csharp-unity-core.git
+[submodule "tool/compet/csharp-unity-log"]
+	path = tool/compet/csharp-unity-log
+	url = https://github.com/darkcompet/csharp-unity-log.git
+[submodule "tool/compet/csharp-unity-json"]
+	path = tool/compet/csharp-unity-json
+	url = https://github.com/darkcompet/csharp-unity-json.git
+[submodule "tool/compet/csharp-unity-http"]
+	path = tool/compet/csharp-unity-http
+	url = https://github.com/darkcompet/csharp-unity-http.git
+[submodule "tool/compet/csharp-unity-preference"]
+	path = tool/compet/csharp-unity-preference
+	url = https://github.com/darkcompet/csharp-unity-preference.git
