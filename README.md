@@ -106,6 +106,7 @@ different class names on that frameworks => it is not convenience for using late
 	git submodule add https://github.com/darkcompet/csharp-unity-json.git
 	git submodule add https://github.com/darkcompet/csharp-unity-http.git
 	git submodule add https://github.com/darkcompet/csharp-unity-preference.git
+	git submodule add https://github.com/darkcompet/csharp-unity-realtime.git
 	```
 
 

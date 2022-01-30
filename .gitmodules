@@ -28,3 +28,6 @@
 [submodule "tool/compet/csharp-unity-preference"]
 	path = tool/compet/csharp-unity-preference
 	url = https://github.com/darkcompet/csharp-unity-preference.git
+[submodule "tool/compet/csharp-unity-realtime"]
+	path = tool/compet/csharp-unity-realtime
+	url = https://github.com/darkcompet/csharp-unity-realtime.git
