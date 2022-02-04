@@ -31,3 +31,9 @@
 [submodule "tool/compet/csharp-unity-realtime"]
 	path = tool/compet/csharp-unity-realtime
 	url = https://github.com/darkcompet/csharp-unity-realtime.git
+[submodule "tool/compet/csharp-unity-messagepack"]
+	path = tool/compet/csharp-unity-messagepack
+	url = https://github.com/darkcompet/csharp-unity-messagepack.git
+[submodule "tool/compet/csharp-core-messagepack"]
+	path = tool/compet/csharp-core-messagepack
+	url = https://github.com/darkcompet/csharp-core-messagepack.git
