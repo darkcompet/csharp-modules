@@ -28,12 +28,6 @@
 [submodule "tool/compet/csharp-unity-preference"]
 	path = tool/compet/csharp-unity-preference
 	url = https://github.com/darkcompet/csharp-unity-preference.git
-[submodule "tool/compet/csharp-unity-messagepack"]
-	path = tool/compet/csharp-unity-messagepack
-	url = https://github.com/darkcompet/csharp-unity-messagepack.git
-[submodule "tool/compet/csharp-core-messagepack"]
-	path = tool/compet/csharp-core-messagepack
-	url = https://github.com/darkcompet/csharp-core-messagepack.git
 [submodule "tool/compet/csharp-unity-photon"]
 	path = tool/compet/csharp-unity-photon
 	url = https://github.com/darkcompet/csharp-unity-photon.git
