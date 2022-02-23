@@ -31,3 +31,9 @@
 [submodule "tool/compet/csharp-unity-photon"]
 	path = tool/compet/csharp-unity-photon
 	url = https://github.com/darkcompet/csharp-unity-photon.git
+[submodule "tool/compet/csharp-core-photon"]
+	path = tool/compet/csharp-core-photon
+	url = https://github.com/darkcompet/csharp-core-photon.git
+[submodule "tool/compet/csharp-asp-photon"]
+	path = tool/compet/csharp-asp-photon
+	url = https://github.com/darkcompet/csharp-asp-photon.git
