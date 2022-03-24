@@ -99,6 +99,7 @@ different class names on that frameworks => it is not convenience for using late
 	git submodule add https://github.com/darkcompet/csharp-core-messagepack.git
 	git submodule add https://github.com/darkcompet/csharp-core-photon.git
 	# For .NET
+	git submodule add https://github.com/darkcompet/csharp-net-core.git
 	git submodule add https://github.com/darkcompet/csharp-net-log.git
 	git submodule add https://github.com/darkcompet/csharp-net-json.git
 	git submodule add https://github.com/darkcompet/csharp-net-http.git
