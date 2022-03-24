@@ -103,6 +103,7 @@ different class names on that frameworks => it is not convenience for using late
 	git submodule add https://github.com/darkcompet/csharp-net-json.git
 	git submodule add https://github.com/darkcompet/csharp-net-http.git
 	# For ASP.NET Core
+	git submodule add https://github.com/darkcompet/csharp-asp-core.git
 	git submodule add https://github.com/darkcompet/csharp-asp-photon.git
 	# For Unity
 	git submodule add https://github.com/darkcompet/csharp-unity-core.git

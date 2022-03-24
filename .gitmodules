@@ -37,3 +37,6 @@
 [submodule "tool/compet/csharp-asp-photon"]
 	path = tool/compet/csharp-asp-photon
 	url = https://github.com/darkcompet/csharp-asp-photon.git
+[submodule "tool/compet/csharp-asp-core"]
+	path = tool/compet/csharp-asp-core
+	url = https://github.com/darkcompet/csharp-asp-core.git
