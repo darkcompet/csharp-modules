@@ -28,59 +28,6 @@ Because, if there exists 2 ways to implement a `http` feature at `Core` and `Uni
 different class names on that frameworks => it is not convenience for using later.
 
 
-## Module List
-
-- Core module (`Tool.Compet.Core`)
-	
-	```bash
-	# For all modules (csharp-*-*)
-	https://github.com/darkcompet/csharp-core.git
-	
-	# For Unity modules (csharp-unity-*)
-	https://github.com/darkcompet/csharp-unity-core.git
-	```
-
-- Json module (`Tool.Compet.Json`)
-
-	```bash
-	# For Net
-	https://github.com/darkcompet/csharp-net-json.git
-	
-	# For Unity
-	https://github.com/darkcompet/csharp-unity-json.git
-	```
-
-- Http module (`Tool.Compet.Http`)
-
-	```bash
-	# For All
-	https://github.com/darkcompet/csharp-core-http.git
-
-	# For Net
-	https://github.com/darkcompet/csharp-net-http.git
-	
-	# For Unity
-	https://github.com/darkcompet/csharp-unity-http.git
-	```
-
-- Log module (`Tool.Compet.Log`)
-
-	```bash
-	# For Net
-	https://github.com/darkcompet/csharp-net-log.git
-	
-	# For Unity
-	https://github.com/darkcompet/csharp-unity-log.git
-	```
-
-- Preference module (`Tool.Compet.Preference`)
-
-	```bash
-	# For Unity
-	https://github.com/darkcompet/csharp-unity-preference.git
-	```
-
-
 ## How this project was made
 
 - Setup
@@ -114,6 +61,39 @@ different class names on that frameworks => it is not convenience for using late
 	git submodule add https://github.com/darkcompet/csharp-unity-preference.git
 	git submodule add https://github.com/darkcompet/csharp-unity-photon.git
 	git submodule add https://github.com/darkcompet/csharp-unity-messagepack.git
+	```
+
+
+## How to make new module
+
+- Register new module
+
+	```bash
+	# Turn off root git
+	mv .git .git-tmp
+
+	# Make new module
+	# For faster, just copy a module from tool/compet to current folder.
+	mkdir csharp-mymodule && cd csharp-mymodule
+
+	# Publish the module
+	# For faster, go with vscode Lens plugin
+	git init
+	git add --all
+	git commit -m "Initial commit"
+	git push
+	cd ../
+
+	# Delete create module
+	rm -rf csharp-mymodule
+
+	# Get back root git
+	mv .git-tmp .git
+
+	# Add the module to this project
+	cd tool/compet
+	git submodule add https://github.com/darkcompet/csharp-mymodule.git
+	cd ../..
 	```
 
 
