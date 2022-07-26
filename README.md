@@ -78,6 +78,8 @@ different class names on that frameworks => it is not convenience for using late
 
 	# Publish the module
 	# For faster, go with vscode Lens plugin
+	mkdir src
+	touch .gitignore README.md
 	git init
 	git add --all
 	git commit -m "Initial commit"

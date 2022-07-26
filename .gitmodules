@@ -43,6 +43,6 @@
 [submodule "tool/compet/csharp-net-core"]
 	path = tool/compet/csharp-net-core
 	url = https://github.com/darkcompet/csharp-net-core.git
-[submodule "tool/compet/csharp-asp-efcore"]
-	path = tool/compet/csharp-asp-efcore
-	url = https://github.com/darkcompet/csharp-asp-efcore.git
+[submodule "tool/compet/csharp-net-efcore"]
+	path = tool/compet/csharp-net-efcore
+	url = https://github.com/darkcompet/csharp-net-efcore.git
