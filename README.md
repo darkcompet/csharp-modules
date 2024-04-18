@@ -1,38 +1,34 @@
 # C# Modules
+This repo contains all C# modules which be used in projects.
 
-This is git repo, just for management, contains all C# modules which be used in other projects.
 
-
-## Module concept
-
+## Concept
 Suppose we want to implement a feature over some frameworks.
 
-To make it simple, for eg,. we wanna implement `http` networking for frameworks: `Net, Asp, Unity`.
-We just need one namespace `Tool.Compet.Http` for all that frameworks, and need below 4 repositories
-instead of 3 repositories to handle sharing source code between frameworks.
+For eg,. we wanna implement `http` networking on frameworks: `Net, Asp, Unity`.
+We will create below 4 repositories instead of 3 repositories to share source code between frameworks.
+Note that, we should use same namespace `Tool.Compet.Http` on repos.
 
 ```bash
-# Share abstraction/implementation stuffs between frameworks
-https://github.com/darkcompet/csharp-core-http.git
-# Implementation for Net
-https://github.com/darkcompet/csharp-net-http.git
-# Implementation for Asp
-https://github.com/darkcompet/csharp-asp-http.git
-# Implementation for Unity
-https://github.com/darkcompet/csharp-unity-http.git
+	# Shared part (written in C#)
+	https://github.com/darkcompet/cs-http.git
+	# Implementation of .NET Core
+	https://github.com/darkcompet/cs-net-http.git
+	# Implementation of Asp
+	https://github.com/darkcompet/cs-asp-http.git
+	# Implementation of Unity
+	https://github.com/darkcompet/cs-unity-http.git
 ```
 
-At `Core` module, we should provide abstraction, and implement stuffs which is unique implementation
-over all frameworks.
-Because, if there exists 2 ways to implement a `http` feature at `Core` and `Unity`, then we have to use
-different class names on that frameworks => it is not convenience for using later.
+Note that, each lib in framework is based on their core lib,
+for eg,. `cs-net-http` is based on `cs-net` which is based on `cs`.
 
 
 ## How this project was made
 
 - Setup
 
-	```bash
+```bash
 	# Init git
 	git init
 	nano README.md
@@ -41,43 +37,46 @@ different class names on that frameworks => it is not convenience for using late
 	mkdir tool; mkdir tool/compet; cd tool/compet;
 
 	# Add git submodules
-	git submodule add https://github.com/darkcompet/csharp-core.git
-	git submodule add https://github.com/darkcompet/csharp-core-http.git
-	git submodule add https://github.com/darkcompet/csharp-core-messagepack.git
-	git submodule add https://github.com/darkcompet/csharp-core-photon.git
-	# For .NET
-	git submodule add https://github.com/darkcompet/csharp-net-core.git
-	git submodule add https://github.com/darkcompet/csharp-net-log.git
-	git submodule add https://github.com/darkcompet/csharp-net-json.git
-	git submodule add https://github.com/darkcompet/csharp-net-http.git
+	git submodule add https://github.com/darkcompet/cs.git
+	git submodule add https://github.com/darkcompet/cs-http.git
+	git submodule add https://github.com/darkcompet/cs-messagepack.git
+	git submodule add https://github.com/darkcompet/cs-photon.git
+	
+	# For .NET Core
+	git submodule add https://github.com/darkcompet/cs-net.git
+	git submodule add https://github.com/darkcompet/cs-net-log.git
+	git submodule add https://github.com/darkcompet/cs-net-json.git
+	git submodule add https://github.com/darkcompet/cs-net-http.git
+	
 	# For ASP.NET Core
-	git submodule add https://github.com/darkcompet/csharp-asp-core.git
-	git submodule add https://github.com/darkcompet/csharp-asp-photon.git
+	git submodule add https://github.com/darkcompet/cs-asp.git
+	git submodule add https://github.com/darkcompet/cs-asp-photon.git
+	
 	# For Unity
-	git submodule add https://github.com/darkcompet/csharp-unity-core.git
-	git submodule add https://github.com/darkcompet/csharp-unity-log.git
-	git submodule add https://github.com/darkcompet/csharp-unity-json.git
-	git submodule add https://github.com/darkcompet/csharp-unity-http.git
-	git submodule add https://github.com/darkcompet/csharp-unity-preference.git
-	git submodule add https://github.com/darkcompet/csharp-unity-photon.git
-	git submodule add https://github.com/darkcompet/csharp-unity-messagepack.git
+	git submodule add https://github.com/darkcompet/cs-unity.git
+	git submodule add https://github.com/darkcompet/cs-unity-log.git
+	git submodule add https://github.com/darkcompet/cs-unity-json.git
+	git submodule add https://github.com/darkcompet/cs-unity-http.git
+	git submodule add https://github.com/darkcompet/cs-unity-preference.git
+	git submodule add https://github.com/darkcompet/cs-unity-photon.git
+	git submodule add https://github.com/darkcompet/cs-unity-messagepack.git
 
 	# Make as dotnet app
 	dotnet new console
-	```
+```
 
 
-## How to make new module
+## Others
 
 - Register new module
 
-	```bash
+```bash
 	# Turn off root git
 	mv .git .git-tmp
 
 	# Make new module
 	# For faster, just copy a module from tool/compet to current folder.
-	mkdir csharp-mymodule && cd csharp-mymodule
+	mkdir cs-mymodule && cd cs-mymodule
 
 	# Publish the module
 	# For faster, go with vscode Lens plugin
@@ -90,31 +89,28 @@ different class names on that frameworks => it is not convenience for using late
 	cd ../
 
 	# Delete create module
-	rm -rf csharp-mymodule
+	rm -rf cs-mymodule
 
 	# Get back root git
 	mv .git-tmp .git
 
 	# Add the module to this project
 	cd tool/compet
-	git submodule add https://github.com/darkcompet/csharp-mymodule.git
+	git submodule add https://github.com/darkcompet/cs-mymodule.git
 	cd ../..
-	```
-
-
-## Tips
+```
 
 - How to remove a submodule
 
-	```bash
+```bash
 	# Goto directory of added submodules and Delete from git
 	cd tool/compet
-	git submodule deinit -f csharp-core
-	git rm -f csharp-core
+	git submodule deinit -f cs-core
+	git rm -f cs-core
 
 	# Delete from disk
-	rm -rf .git/modules/tool/compet/csharp-core
+	rm -rf .git/modules/tool/compet/cs-core
 
 	# Delete record from .gitmodules
 	Manually delete lines of the submodule from file `.gitmodules`
-	```
+```
